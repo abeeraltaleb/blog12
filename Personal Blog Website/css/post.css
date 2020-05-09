@@ -1,0 +1,121 @@
+/* For desktop */
+@media only screen and (min-width:800px) {
+body{
+  margin:auto;
+  font-family:serif;
+  font-size: 20px;
+}
+main{
+  max-width: 3000px;
+}
+.container{
+ display:grid;
+ grid-template-areas:
+'hd hd hd hd hd hd hd hd'
+'main main main main main main main main '
+'ft ft ft ft ft ft ft ft';
+}
+ header{
+   grid-area:hd;
+ }
+ .content{
+   max-width:5000px;
+   grid-area: main;
+   margin: 30px;
+   padding-right: 40px;
+   padding-right: 40px;
+}
+.blog-title{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.card-btn{
+  background-color: #1b5e20;
+  border-radius: 8px;
+  border:none;
+  font-family:monospace;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  color:white;
+  text-decoration:none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 1.5);
+}
+.card-btn:hover{
+  background-color: #4c8c4a;
+}
+.footer{
+  grid-area:ft;
+}
+.posts{
+  margin-left:35px;
+  display:grid;
+  grid-template-columns:auto;
+  grid-gap:10px;
+  font-family: sans-serif;
+}
+.post{
+  box-shadow: 0 0 3px rgba(0, 0, 0, 1.5);
+  padding:50px;
+  margin:0;
+}
+.post-img{
+  width: 800px;
+height: 600px;
+}
+}
+.avatar{
+  width:42px;
+  height: 42px;
+}
+.figure-Posts{
+  margin-top:30px;
+  margin-right: 15px;
+  background-color:#aee571;
+  padding:15px;
+}
+.links{
+  text-decoration: none;
+  color:white;
+}
+.links:hover{
+  background-color:
+}
+#contact {
+  background-color:#4527A0;
+  color: white;
+  padding: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  margin: 20px;
+}
+.social .list{
+  list-style: none;
+  display: flex;
+  padding-left: 10px;
+}
+}
+}
+/* For mobile phones: */
+@media only screen and (max-width:500px) {
+  .posts{
+    width: 100%;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-gap:40px;
+}
+
+
+}
+
+/* For tablets: */
+@media only screen and (max-width:800px) {
+
+  .posts{
+    grid-template-columns: 4fr ;
+    align-items: center;
+    grid-gap:30px;
+  }
+}
